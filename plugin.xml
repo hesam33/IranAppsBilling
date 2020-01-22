@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="vinoos-cordova-iap"
+    version="1.0.0">
+    <name>Vinoos-Cordova-IAP</name>
+    <description>Vinoos plugin for In-App Purchases</description>
+    <author>Vinoos</author>
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugin,iap,markets,iab,vinoos</keywords>
+    <repo>https://github.com/vinoosir/vinoos-cordova-iap</repo>
+    <issue>https://github.com/vinoosir/vinoos-cordova-iap/issues</issue>	
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+    <js-module src="www/iap.js" name="iap">
+        <clobbers target="window.iap" />
+    </js-module>    
+
+	
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="IAP">
+				<param name="android-package" value="vinoos.cordova.iap.IAP"/>
+			</feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="$PERMISSION" />
+		</config-file>
+		<preference name="PERMISSION" default="ir.tgbs.iranapps.permission.BILLING" />
+
+		<source-file src="src/IInAppBillingService.aidl" target-dir="src/com/android/vending/billing" />
+        <source-file src="src/IAP.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/Base64.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/Base64DecoderException.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/IabException.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/IabHelper.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/IabResult.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/Inventory.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/Security.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/SkuDetails.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/Purchase.java" target-dir="src/vinoos/cordova/iap" />
+	</platform>
+</plugin>

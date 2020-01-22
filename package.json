@@ -1,0 +1,39 @@
+{
+  "name": "vinoos-cordova-iap",
+  "version": "1.0.0",
+  "description": "Vinoos plugin for In-App Purchases",
+  "cordova": {
+    "id": "vinoos-cordova-iap",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinoosir/vinoos-cordova-iap.git"
+  },
+  "keywords": [
+    "bazaar",
+    "myket",
+    "iranapps",
+    "parshub",
+    "cando",
+    "plugin",
+    "iab",
+    "vinoos",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Vinoos",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/vinoosir/vinoos-cordova-iap/issues"
+  },
+  "homepage": "https://github.com/vinoosir/vinoos-cordova-iap#readme"
+}
